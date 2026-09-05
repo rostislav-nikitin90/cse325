@@ -1,0 +1,138 @@
+week1
+
+Evidence from the end of the module Create a web API with ASP.NET Core controllers showing the existing content, and my additional record.
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 05 Sep 2026 19:56:23 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  }
+]
+
+
+HTTP/1.1 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 05 Sep 2026 19:58:05 GMT
+Server: Kestrel
+Location: http://localhost:5157/Pizza/3
+Transfer-Encoding: chunked
+
+{
+  "id": 3,
+  "name": "Marghe",
+  "isGlutenFree": false
+}
+
+
+HTTP/1.1 204 No Content
+Connection: close
+Date: Sat, 05 Sep 2026 19:58:54 GMT
+Server: Kestrel
+
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 05 Sep 2026 19:59:39 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "id": 3,
+  "name": "Margherita",
+  "isGlutenFree": false
+}
+
+
+HTTP/1.1 204 No Content
+Connection: close
+Date: Sat, 05 Sep 2026 20:00:34 GMT
+Server: Kestrel
+
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 05 Sep 2026 20:00:57 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  }
+]
+
+
+HTTP/1.1 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 05 Sep 2026 20:04:01 GMT
+Server: Kestrel
+Location: http://localhost:5157/Pizza/3
+Transfer-Encoding: chunked
+
+{
+  "id": 3,
+  "name": "Margherita",
+  "isGlutenFree": false
+}
+
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Sat, 05 Sep 2026 20:04:29 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Margherita",
+    "isGlutenFree": false
+  }
+]
+
+
+
+A text copy of my working sales summary function for Part 2:
+Sales Summary
+
+Total Sales: $2,012.20
+
+Details:
+201: $501.22
+202: $1,234.22
+203: $99.00
+204: $88.88
