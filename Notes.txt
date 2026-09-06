@@ -127,6 +127,37 @@ Transfer-Encoding: chunked
 
 
 A text copy of my working sales summary function for Part 2:
+// Generate sales summary report
+GenerateSalesSummaryReport(salesFiles, salesTotal, salesTotalDir);
+
+void GenerateSalesSummaryReport(IEnumerable<string> salesFiles, double total, string outputDir)
+{
+    StringBuilder reportBuilder = new StringBuilder();
+    reportBuilder.AppendLine("Sales Summary");
+    reportBuilder.AppendLine();
+    reportBuilder.AppendLine($"Total Sales: {total.ToString("C")}");
+    reportBuilder.AppendLine();
+    reportBuilder.AppendLine("Details:");
+
+    foreach (var file in salesFiles)
+    {
+        string salesJson = File.ReadAllText(file);
+        SalesData? data = JsonConvert.DeserializeObject<SalesData?>(salesJson);
+        double fileTotal = data?.Total ?? 0;
+
+        string storeName = new DirectoryInfo(Path.GetDirectoryName(file)!).Name;
+
+        // Skip root-level "stores" entry
+        if (storeName.Equals("stores", StringComparison.OrdinalIgnoreCase))
+            continue;
+
+        reportBuilder.AppendLine($"{storeName}: {fileTotal.ToString("C")}");
+    }
+
+    File.WriteAllText(Path.Combine(outputDir, "SalesSummary.txt"), reportBuilder.ToString());
+}
+
+
 Sales Summary
 
 Total Sales: $2,012.20
