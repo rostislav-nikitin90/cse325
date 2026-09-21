@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "./${workspaceFolder}/c:/Users/Administrator/AppData/Roaming/Code/User/workspaceStorage/4a7e9d2abe05042bf57debb1bf13a612/ms-dotnettools.csdevkit/BlazingPizza.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "./${workspaceFolder}/c:/Users/Administrator/AppData/Roaming/Code/User/workspaceStorage/4a7e9d2abe05042bf57debb1bf13a612/ms-dotnettools.csdevkit/BlazingPizza.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/BlazingPizza.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
